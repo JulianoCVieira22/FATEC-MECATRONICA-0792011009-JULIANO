@@ -1,0 +1,21 @@
+pontos = {}
+
+continuar = True
+while continuar == True:
+  valor_dos_pontos = float(input("Informe uma pontuação:"))
+  jogador = input("Informe um jogador:").lower()
+ 
+  if jogador in pontos.keys():
+   
+    pontos[jogador] += valor_dos_pontos
+  else:
+   
+    pontos[jogador] = valor_dos_pontos
+  print("Jogadores:")
+  print(pontos.keys())
+  print("Pontos:")
+  print(pontos.values())
+  continuar = input("Continuar?").lower() == 's'
+
+for jogador in pontos.keys():
+  print("Jogador:", jogador, "Pontos:", pontos[jogador])
